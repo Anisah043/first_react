@@ -1,67 +1,45 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { useState } from 'react'
-// const myFirstElement = (
-//   <table>
-//     <tbody>
-//       <tr>
-//         <td>Name</td>
-//       </tr>
-//       <tr>
-//         <td>Name</td>
-//         <td>Name</td>
-//       </tr>
-//     </tbody>
-//   </table>
-// )
+import ReactDom from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Blogs from "./pages/Blogs";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+import ToDo from "./pages/ToDo";
+import { useState } from "react";
+import React from 'react';
 
-// const myFirstElement = <h1>React is {5 + 5} times better with JSX</h1>
-// const root = ReactDOM.createRoot(document.getElementById('root'))
-// root.render(myFirstElement)
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [toDos, setToDos] = useState(["toDo 1", "toDo 2"]);
 
-// ReactDOM.createRoot(document.getElementById('sandy')).render(<p>Hi, Sandy!</p>)
-
-// function MyForm() {
-//   const [textarea, setTextarea] = useState('Wow a textaera!')
-
-//   const handleChange = (event) => {
-//     setTextarea(event.target.value)
-//   }
-
-//   return (
-//     <form>
-//       <label htmlFor="my-textarea">Textarea:</label>
-//       <textarea
-//         id="my-textarea"
-//         value={textarea}
-//         onChange={handleChange}
-//       ></textarea>
-//       <p>{textarea.length} characters</p>
-//     </form>
-//   )
-// }
-
-// const root = ReactDOM.createRoot(document.getElementById('root'))
-// root.render(<MyForm />)
-
-function MyForm(){
-  const [car, setCar] = useState('Volvo')
-  const handleChange = (event) => {
-    setCar(event.target.value)
+  const increment = () => {
+    setCount(count + 1);
   }
+
   return (
-    <form>
-      <label htmlFor="cars">Choose a car:</label>
-      <select id="cars" value={car} onChange={handleChange}>
-        <option value="Volvo">Volvo</option>
-        <option value="Saab">Saab</option>
-        <option value="Mercedes">Mercedes</option>
-        <option value="Audi">Audi</option>
-      </select>
-      <p>Your selected car is: {car}</p>
-    </form>
+    <>
+      <ToDo todos={toDos} />
+      <hr />
+      <h2>Count: {count}</h2>
+      <button onClick={increment}>+</button>
+    </>
   )
+  // return(
+  //   <BrowserRouter>
+  //     <Routes>
+  //       <Route path="/" element={<Layout />}>
+  //         <Route index element={<Home />} />
+  //         <Route path="blogs" element={<Blogs />} />
+  //         <Route path="contact" element={<Contact />} />
+  //         <Route path="*" element={<NoPage />} />
+  //       </Route>
+  //     </Routes>
+  //   </BrowserRouter>
+  // )
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<MyForm />)
+// export default App;
+
+const root = ReactDom.createRoot(document.getElementById("root"));
+root.render(<App />);
