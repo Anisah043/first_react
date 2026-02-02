@@ -1,2 +1,2 @@
-# Welcome to 
-This is a project that aims to learn react
+# Welcome to Anisah's project
+This is a project that aims to learn react and get a certification in react
