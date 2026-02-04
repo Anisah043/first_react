@@ -4,8 +4,8 @@ import Car from "./components/Car";
 import NewCar from "./components/NewCar";
 import CarWithProps from "./components/CarWithProps";
 import Garage from "./components/Garage";
-
+import Click from "./components/Click";
 const myElement = <CarWithProps color="blue" brand="Ford" />;
 const root = ReactDom.createRoot(document.getElementById('root'));
 // root.render(<Car/>);
-root.render(<Garage/>);
+root.render(<Click/>);
