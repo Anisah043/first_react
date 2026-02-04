@@ -1,13 +1,8 @@
 import ReactDom from "react-dom/client";
 import React from 'react';
 import Car from "./components/Car";
-// Class component
-// class Car extends React.Component {
-//   render() {
-//     return <h2>I am a Car!</h2>;
-//   }
-// }
-// Functional component
+import NewCar from "./components/NewCar";
 
 const root = ReactDom.createRoot(document.getElementById('root'));
-root.render(<Car/>);
+// root.render(<Car/>);
+root.render(<NewCar />);
