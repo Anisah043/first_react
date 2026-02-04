@@ -2,7 +2,10 @@ import ReactDom from "react-dom/client";
 import React from 'react';
 import Car from "./components/Car";
 import NewCar from "./components/NewCar";
+import CarWithProps from "./components/CarWithProps";
+import Garage from "./components/Garage";
 
+const myElement = <CarWithProps color="blue" brand="Ford" />;
 const root = ReactDom.createRoot(document.getElementById('root'));
 // root.render(<Car/>);
-root.render(<NewCar />);
+root.render(<Garage/>);

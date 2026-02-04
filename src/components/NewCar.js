@@ -4,11 +4,17 @@ import ReactDom from "react-dom/client";
 class NewCar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {color: "red", brand: "Ford"};
+        this.state = { color: "red", brand: "Ford" };
     }
-    render(){
-        return(
-            <h2>I am a {this.state.color} {this.state.brand}!</h2>
+    changeColor = () => {
+        this.setState({ color: "blue" });
+    }
+    render() {
+        return (
+            <>
+                <h2>I am a {this.state.color} {this.state.brand}!</h2>
+                <button type="button" onClick={this.changeColor}>Change color</button>
+            </>
         )
     }
 }
