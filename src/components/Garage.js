@@ -1,11 +1,11 @@
-import CarWithProps from "./CarWithProps";
-
-function Garage() {
-    const carInfo = {model: "Mustang", year: 1964};
+function Garage(props) {
+    const cars = props.cars
     return (
       <div>
-        <h1>Who lives in my garage?</h1>
-        <CarWithProps brand={carInfo} />
+        <h1>How many cars in my garage?</h1>
+        {cars.length > 0 && (
+          <h1>I have {cars.length} in your garage</h1>
+        )}
       </div>
     );
 }

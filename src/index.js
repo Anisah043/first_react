@@ -5,7 +5,10 @@ import NewCar from "./components/NewCar";
 import CarWithProps from "./components/CarWithProps";
 import Garage from "./components/Garage";
 import Click from "./components/Click";
+import Goal from "./components/Condition";
 const myElement = <CarWithProps color="blue" brand="Ford" />;
 const root = ReactDom.createRoot(document.getElementById('root'));
 // root.render(<Car/>);
-root.render(<Click/>);
+// root.render(<Goal isGoal={false}/>);
+const cars = ['Ford', 'BMW']
+root.render(<Garage cars={cars}/>);
