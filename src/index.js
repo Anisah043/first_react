@@ -10,5 +10,9 @@ const myElement = <CarWithProps color="blue" brand="Ford" />;
 const root = ReactDom.createRoot(document.getElementById('root'));
 // root.render(<Car/>);
 // root.render(<Goal isGoal={false}/>);
-const cars = ['Ford', 'BMW']
-root.render(<Garage cars={cars}/>);
+const cars = [
+    { id: 1, brand: 'Ford' },
+    { id: 2, brand: 'BMW' },
+    { id: 3, brand: 'Audi' },
+]
+root.render(<Garage cars={cars} />);

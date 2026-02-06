@@ -1,7 +1,7 @@
 import ReactDom from "react-dom/client";
 
 function CarWithProps(props){
-    return <h2>I am a {props.cars}!</h2>;
+    return <li>Car brand: {props.brand}</li>;
 }
 
 export default CarWithProps;
