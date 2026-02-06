@@ -9,6 +9,6 @@ import Goal from "./components/Condition";
 const myElement = <CarWithProps color="blue" brand="Ford" />;
 const root = ReactDom.createRoot(document.getElementById('root'));
 // root.render(<Car/>);
-root.render(<Goal isGoal={false}/>);
-// const cars = ['Ford', 'BMW']
-// root.render(<Garage cars={cars}/>);
+// root.render(<Goal isGoal={false}/>);
+const cars = ['Ford', 'BMW']
+root.render(<Garage cars={cars}/>);
